@@ -1,2 +1,5 @@
 -- Use the loadDataFromBucket function to load data into your table.
-${dataformUtils.loadDataFromBucket('ds_edw', 'shops')}
+${dataformUtils.loadDataFromBucket('gs://terraform-ambient-stone-394013',
+                                    'data/shops/*',
+                                    'ds_edw',
+                                    'shops')}

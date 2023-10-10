@@ -1,0 +1,2 @@
+-- Use the loadDataFromBucket function to load data into your table.
+${dataformUtils.loadDataFromBucket('ds_edw', 'shops')}

@@ -1,0 +1,10 @@
+{
+  "defaultSchema": "dataform",
+  "warehouse": "bigquery",
+  "defaultDatabase": "ambient-stone-394013",
+  "defaultLocation": "EU",
+  "vars": {
+    "projectId": "ambient-stone-394013"
+  }
+}
+    

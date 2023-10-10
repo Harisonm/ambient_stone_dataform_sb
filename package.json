@@ -1,0 +1,6 @@
+{
+  "name": "ambient_stone_dataform_sb",
+  "dependencies": {
+    "@dataform/core": "2.4.2"
+  }
+}

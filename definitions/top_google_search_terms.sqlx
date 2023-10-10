@@ -1,0 +1,20 @@
+config {
+  type: "table",
+  schema: "ds_edw",
+  database: config.getDatabase(),
+  name: "purchases_by_shops",
+  columns: {
+    "total_purchase": "A description for the test column",
+    "shop_name": "First name of peoplee in top term classifier",
+  },
+  disabled: false
+}
+
+select sum(purchases) as total_purchase, shop_name
+from `ambient-stone-394013`.`ds_edw`.`customers` as c
+join `ambient-stone-394013`.`ds_edw`.`shops` as s
+on c.shop_id = s.id
+group by shop_name
+order by shop_name
+
+-- ${ref("customers__r")}

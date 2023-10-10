@@ -11,10 +11,8 @@ config {
 }
 
 select sum(purchases) as total_purchase, shop_name
-from `ambient-stone-394013`.`ds_edw`.`customers` as c
+from  `ambient-stone-394013`.`ds_edw`.`customers` as c
 join `ambient-stone-394013`.`ds_edw`.`shops` as s
 on c.shop_id = s.id
 group by shop_name
 order by shop_name
-
--- ${ref("customers__r")}

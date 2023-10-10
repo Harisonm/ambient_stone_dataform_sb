@@ -1,5 +1,17 @@
 -- Use the loadDataFromBucket function to load data into your table.
+config {
+  tags: ["staging", "daily"],
+  description: "Cleaned version of the raw customer table.",
+  columns: {
+    id: "Id of shop",
+    shop_name: "Name of shop",
+  },
+  hasOutput: true,
+  name: "shops",
+}
+
 ${dataformUtils.loadDataFromBucket('gs://terraform-ambient-stone-394013',
                                     'data/shops/*',
                                     'ds_edw',
-                                    'shops')}
+                                    'shops',
+                                    config)}
